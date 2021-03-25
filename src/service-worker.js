@@ -131,6 +131,15 @@ self.addEventListener("active", function (event) {
   console.log("Active Service Worker");
 });
 
+self.addEventListener("push", function (event) {
+  event.waitUntil(
+    self.registration.showNotification("KramedPlay", {
+      icon: "icon-120.png",
+      body: event.data.text(),
+    })
+  );
+});
+
 // This allows the web app to trigger skipWaiting via
 // registration.waiting.postMessage({type: 'SKIP_WAITING'})
 self.addEventListener("message", (event) => {

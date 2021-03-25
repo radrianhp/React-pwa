@@ -2,6 +2,35 @@
 import React, { Component } from "react";
 import Catalogs from "parts/Catalogs";
 
+function urlB64ToUint8Array(base64String) {
+  const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
+  const base64 = (base64String + padding)
+    .replace(/\-/g, "+")
+    .replace(/_/g, "/");
+
+  const rawData = window.atob(base64);
+  const outputArray = new Uint8Array(rawData.length);
+
+  for (let i = 0; i < rawData.length; ++i) {
+    outputArray[i] = rawData.charCodeAt(i);
+  }
+  return outputArray;
+}
+
+function subscribe() {
+  const key =
+    "BFsMSP1hpY6dk5G1LUKSDIdNJOjCSXI2pySSIdaqqQbBsWwrzo8T9WWI8Gvm9kkHKztl683eppAvvXrdhFirNbo";
+  try {
+    global.registration.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServeKey: urlB64ToUint8Array(key),
+    });
+    console.log("Subscribe!");
+  } catch (error) {
+    console.log("Cannot Subscribe");
+  }
+}
+
 export default class LandingPage extends Component {
   componentDidMount() {
     document.title = "React - Webpack";
@@ -125,7 +154,9 @@ export default class LandingPage extends Component {
               <h2>Apakah Anda siap untuk menjadi programer yang handal?</h2>
               <h3>Ayo belajar coding, ayo belajar menjadi lebih kreatif!</h3>
             </div>
-            <span className="btn message">Mulai Belajar</span>
+            <button className="btn message" onClick={subscribe}>
+              Mulai Belajar
+            </button>
           </div>
         </div>
         <footer>
