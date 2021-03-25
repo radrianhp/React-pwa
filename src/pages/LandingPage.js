@@ -2,6 +2,11 @@
 import React, { Component } from "react";
 import Catalogs from "parts/Catalogs";
 
+import image1 from "assets/images/image1.jpg";
+import image2 from "assets/images/image2.jpg";
+import image3 from "assets/images/image3.jpg";
+import image4 from "assets/images/image4.jpg";
+
 function urlB64ToUint8Array(base64String) {
   const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
   const base64 = (base64String + padding)
@@ -43,17 +48,13 @@ export default class LandingPage extends Component {
         <header>
           <div className="container">
             <div className="header-left">
-              <img
-                className="logo"
-                src="https://prog-8.com/images/html/advanced/main_logo.png"
-                alt=""
-              />
+              <span className="logo">KramedGroup</span>
             </div>
             <span className="fa fa-bars menu-icon"></span>
 
             <div className="header-right">
-              <a href="#">Pelajaran</a>
-              <a href="#">Daftar</a>
+              <a href="#">About</a>
+              <a href="#">Katalog</a>
               <a href="#" className="login">
                 Log in
               </a>
@@ -62,12 +63,12 @@ export default class LandingPage extends Component {
         </header>
         <div className="top-wrapper">
           <div className="container">
-            <h1>BELAJAR CODING.</h1>
-            <h1>BELAJAR MENJADI LEBIH KREATIF.</h1>
-            <p>Progate adalah platform online untuk belajar coding.</p>
+            <h1>E-commerce Elektronik</h1>
+            <h1>Tempat Belanja Paling Nyaman</h1>
+            <p>Kebutuhan barang-barang elektronik tinggal pesan disini aja!</p>
             <p>
-              Kami menawarkan lingkungan pemograman yang lengkap untuk
-              mempermudah Anda memulai.
+              Kami menawarkan berbagai merek dan harga yang terjangkau hanya di
+              tempat kami
             </p>
             <div className="btn-wrapper">
               <button href="#" className="btn signup">
@@ -86,60 +87,60 @@ export default class LandingPage extends Component {
         <div className="lesson-wrapper">
           <div className="container">
             <div className="heading">
-              <h2>Cari tau dari mana Anda mau memulai!</h2>
+              <h2>Barang Rekomendasi Tahun Ini</h2>
             </div>
             <div className="lessons">
               <div className="lesson">
                 <div className="lesson-icon">
-                  <img
-                    src="https://prog-8.com/images/html/advanced/html.png"
-                    alt=""
-                  />
+                  <img src={image1} alt="" />
                   <p>HTML & CSS</p>
                 </div>
                 <p className="txt-contents">
-                  Bahasa yang digunakan untuk membuat dan mendesain tampilan
-                  situs web Anda.{" "}
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Consequuntur saepe nostrum pariatur odio molestias quod
+                  doloribus voluptatum, dicta magnam recusandae quia repudiandae
+                  voluptates officiis iusto laudantium rem facere. Consectetur,
+                  ipsum!
                 </p>
               </div>
             </div>
             <div className="lesson">
               <div className="lesson-icon">
-                <img
-                  src="https://prog-8.com/images/html/advanced/jQuery.png"
-                  alt=""
-                />
+                <img src={image2} alt="" />
                 <p>jQuery</p>
               </div>
               <p className="txt-contents">
-                Library JavaScript yang cepat, kaya akan fitur, dan mudah
-                digunakan yang menangani animasi dan permintaan Ajax.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Consequuntur saepe nostrum pariatur odio molestias quod
+                doloribus voluptatum, dicta magnam recusandae quia repudiandae
+                voluptates officiis iusto laudantium rem facere. Consectetur,
+                ipsum!
               </p>
             </div>
             <div className="lesson">
               <div className="lesson-icon">
-                <img
-                  src="https://prog-8.com/images/html/advanced/ruby.png"
-                  alt=""
-                />
+                <img src={image3} alt="" />
                 <p>Ruby</p>
               </div>
               <p className="txt-contents">
-                Bahasa dinamis, serba guna yang sederhana dan produktif. Ruby
-                sering digunakan untuk membuat aplikasi web yang responsive.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Consequuntur saepe nostrum pariatur odio molestias quod
+                doloribus voluptatum, dicta magnam recusandae quia repudiandae
+                voluptates officiis iusto laudantium rem facere. Consectetur,
+                ipsum!
               </p>
             </div>
             <div className="lesson">
               <div className="lesson-icon">
-                <img
-                  src="https://prog-8.com/images/html/advanced/php.png"
-                  alt=""
-                />
+                <img src={image4} alt="" />
                 <p>PHP</p>
               </div>
               <p className="txt-contents">
-                Bahasa skrip open source yang dapat disematkan ke dalam HTML,
-                dan cocok untuk pengembangan web.
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Consequuntur saepe nostrum pariatur odio molestias quod
+                doloribus voluptatum, dicta magnam recusandae quia repudiandae
+                voluptates officiis iusto laudantium rem facere. Consectetur,
+                ipsum!
               </p>
             </div>
             <div className="clear"></div>
@@ -151,8 +152,13 @@ export default class LandingPage extends Component {
         <div className="message-wrapper">
           <div className="container">
             <div className="heading">
-              <h2>Apakah Anda siap untuk menjadi programer yang handal?</h2>
-              <h3>Ayo belajar coding, ayo belajar menjadi lebih kreatif!</h3>
+              <h2>Lorem ipsum dolor sit amet consectetur</h2>
+              <h3>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni
+                itaque vero, sed pariatur velit enim necessitatibus omnis dicta
+                iure laboriosam officia facilis placeat impedit incidunt sequi,
+                fugiat ipsa nostrum neque.
+              </h3>
             </div>
             <button className="btn message" onClick={subscribe}>
               Mulai Belajar
@@ -161,11 +167,7 @@ export default class LandingPage extends Component {
         </div>
         <footer>
           <div className="container">
-            <img
-              src="https://prog-8.com/images/html/advanced/footer_logo.png"
-              alt=""
-            />
-            <p>Learn to code, learn to be creative.</p>
+            <p>@Copyright 2021 Krakatau Media Group</p>
           </div>
         </footer>
       </>
