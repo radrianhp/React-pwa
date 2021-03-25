@@ -1,4 +1,5 @@
 import "assets/App.css";
+import "assets/Responsive.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import LandingPage from "pages/LandingPage";

@@ -1,10 +1,13 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
+import Catalogs from "parts/Catalogs";
 
 export default class LandingPage extends Component {
   componentDidMount() {
     document.title = "React - Webpack";
     window.scrollTo(0, 0);
   }
+
   render() {
     return (
       <>
@@ -16,6 +19,14 @@ export default class LandingPage extends Component {
                 src="https://prog-8.com/images/html/advanced/main_logo.png"
                 alt=""
               />
+            </div>
+            <span className="fa fa-bars menu-icon"></span>
+            <div className="header-right">
+              <a href="#">Pelajaran</a>
+              <a href="#">Daftar</a>
+              <a href="#" className="login">
+                Log in
+              </a>
             </div>
           </div>
         </header>
@@ -101,8 +112,12 @@ export default class LandingPage extends Component {
                 dan cocok untuk pengembangan web.
               </p>
             </div>
+            <div className="clear"></div>
           </div>
         </div>
+
+        <Catalogs />
+
         <div className="message-wrapper">
           <div className="container">
             <div className="heading">
