@@ -79,6 +79,21 @@ registerRoute(
 );
 
 registerRoute(
+  ({ url }) =>
+    url.origin ===
+    "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
+  new NetworkFirst({
+    cacheName: "fonts",
+    plugins: [
+      new ExpirationPlugin({
+        maxAgeSeconds: 60 * 60 * 24 * 356,
+        maxEntries: 30,
+      }),
+    ],
+  })
+);
+
+registerRoute(
   ({ url }) => url.origin.includes("qorebase.io"),
   new NetworkFirst({
     cacheName: "apidata",

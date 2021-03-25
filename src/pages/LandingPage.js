@@ -21,6 +21,7 @@ export default class LandingPage extends Component {
               />
             </div>
             <span className="fa fa-bars menu-icon"></span>
+
             <div className="header-right">
               <a href="#">Pelajaran</a>
               <a href="#">Daftar</a>

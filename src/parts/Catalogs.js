@@ -27,6 +27,11 @@ export default function Catalogs() {
       );
       const { nodes } = await response.json();
       setItems(nodes);
+
+      const script = document.createElement("script");
+      script.src = "/carousel.js";
+      script.async = false;
+      document.body.appendChild(script);
     })();
   }, []);
 
